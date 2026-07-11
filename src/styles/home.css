@@ -20,7 +20,7 @@
 
 #cta .title span {
     color: #FF9114;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #cta .description {
@@ -65,6 +65,9 @@
     width: fit-content;
 }
 
+#banner_mobile {
+    display: none;
+}
 .shape {
     background-color: #FEBA6D;
     width: 50%;
@@ -78,8 +81,11 @@
 
 @media screen and (max-width: 1170px) {
     #home {
-       min-height: 100%;
-       padding: 16px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+        padding: 16px;
     }
 
     #banner,
@@ -89,11 +95,49 @@
     }
 
     #cta {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-    }
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    align-items: center;
+} 
 }
+
+
+@media screen and (max-width: 600px) {
+    #home {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+        padding: 16px;
+    }
+
+    #banner,
+    #banner img,
+    #home .shape {
+        display: none;
+    }
+
+    #cta {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    align-items: center;
+}
+
+    #banner_mobile {
+        display: block;
+        width: 100%;
+        max-width: 420px;
+        margin: 40px auto 0;
+    }
+
+    #banner_mobile img{
+    width:100%;
+    height:auto;
+}
+}
+
 
 @media screen and (max-width: 450px) {
     #phone_button button {
